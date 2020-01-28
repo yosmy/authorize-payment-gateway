@@ -1,0 +1,47 @@
+{
+    "name": "yosmy/authorize-payment-gateway",
+    "description": "",
+    "require": {
+        "php": ">=7.2",
+        "ext-mongodb": "*",
+        "ext-json": "*",
+        "yosmy/mongo": "@dev",
+        "yosmy/error": "@dev",
+        "yosmy/http": "@dev",
+        "yosmy/log": "@dev",
+        "yosmy/payment-gateway": "@dev"
+    },
+    "require-dev": {
+        "symsonte/framework": "@dev",
+        "symfony/debug": "^4.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Yosmy\\Payment\\Gateway\\Authorize\\": [
+                "src/card",
+                "src/charge",
+                "src/communication",
+                "src/customer",
+                "src/exception"
+            ]
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Yosmy\\Payment\\Gateway\\Authorize\\Test\\": [
+                "test/setup",
+                "test/src/card",
+                "test/src/charge",
+                "test/src/customer"
+            ]
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://php.yosmy.com"
+        }
+    ],
+    "prefer-stable": true,
+    "minimum-stability": "dev"
+}
